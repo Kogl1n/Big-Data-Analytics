@@ -3,7 +3,7 @@
 ## Task: 
 We have an app that utilizes a map API to aquire the coordinates
 of the k-nearest (kNN) points of interest (POI), e.g. restaurants, around app users' current positions.
-Requests to that API are expensive.
+Requests to that API are charged for.
 Since we expect to request POIs we already (partially) received for different users, we think about
 a way to buffer the POIs and decide if an API request should be issued.
 
@@ -17,7 +17,7 @@ If this circle is already covered by other circles with buffered POIs then we do
 We construct the union of buffered (appropriate) circles and check whether the union of that area with the circle in question
 is actually bigger.
 1987/88 Franz Auerkammer used generalized Voronoi diagrams, so called Power diagrams, for constructing the union in O(n log(n)) time with n the number of circles. He even showed that computing the actual area coverered is also an O(n log(n)) job.
-In addition we even can save the circles within a tree-map using the Power diagram which is very cheap for getting the k-nearest POIs.
+In addition we even can store the circles within a tree-map using the Power diagram which is suitable regarding cost of operations for getting the k-nearest POIs.
 
 ## Implementation:
 Matlab: https://de.mathworks.com/matlabcentral/fileexchange/44385-power-diagrams
