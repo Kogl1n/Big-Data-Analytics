@@ -13,7 +13,7 @@ For another user we know that there exists a circle with the maximum radius that
 POI around him or her.
 If this circle is already covered by other circles with buffered POIs then we don't need to issue an API request.
 
-##Solution:
+## Solution:
 We construct the union of buffered (appropriate) circles and check whether the union of that area with the circle in question
 is actually bigger.
 1987/88 Franz Auerkammer used generalized Voronoi diagrams, so called Power diagrams, for constructing the union in O(n log(n)) time with n the number of circles. He even showed that computing the actual area coverered is also an O(n log(n)) job.
